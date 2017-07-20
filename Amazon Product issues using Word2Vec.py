@@ -1,13 +1,6 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Thu Jul 20 14:35:40 2017
-
-@author: sande
-"""
-
-# -*- coding: utf-8 -*-
 '''
-Created on Sat Jul 15 20:45:47 2017
+Created on Thu Jul 20 14:35:40 2017
 
 @author: sande
 '''
