@@ -6,6 +6,8 @@ Created on Sat Jul 15 20:45:47 2017
 '''
 
 #importing libraries
+from bs4 import BeautifulSoup
+import requests
 from nltk.corpus import stopwords
 import re
 import nltk
