@@ -63,25 +63,5 @@ with open('amazon.txt','r') as f:
         if word not in addition_words:
             words2.append(word)
     
-    #tok_word=[nltk.word_tokenize(sent) for sent in words2]    
-    tok_word=textacy.preprocess.preprocess_text(str(words2),no_punct=True,no_numbers=True,no_currency_symbols=True,no_accents=True)
-    tok_word=re.sub('NUMBER','',tok_word)
-    tok_word=nltk.word_tokenize(tok_word)
-    lemmtok_words=[]
-    lemmatizer = WordNetLemmatizer()
-    for word in tok_word:
-        
-        lemmtok_words.append(lemmatizer.lemmatize(word))
-    lemmtok_words_new=[nltk.word_tokenize(sent) for sent in lemmtok_words]
-    model=gensim.models.Word2Vec(lemmtok_words_new,min_count=1,size=32)
-    model.most_similar('chrome')
-    lemmtok_words_new=Counter(lemmtok_words)
-    lemmtok_words_new.most_common(30)
-    #Last 30 words
-    sorted(lemmtok_words_new,key=lemmtok_words_new.get)[:30]
-    #keylist=summarize(str(total_reviews))
-    #keywords(keylist)        
-    most_similar_words=[]
-    for i in sorted(lemmtok_words_new,key=lemmtok_words_new.get,reverse=True)[:30]:
-        if len(i) > 2:
-            most_similar_words.append(model.most_similar(i))
+    /*Rest of data preprocessing was done using Textacy and Word2Vec model was implemented. most similar words were then used to form a network graph.
+    Rest of the code hidden for confidentiality purposes*/
